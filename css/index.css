@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 375px;
+    margin: 0 auto;
+    height: 667px;
+    background: url('../image/back.png') no-repeat;
+    background-size: cover
+}
+
+.circle {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    margin: 0 auto;
+    /* background: url(../image/wheel-bg.png) no-repeat;
+    background-size: cover; */
+    animation: backChange 1s linear infinite;
+}
+
+.circle canvas {
+    display: block;
+    z-index: 1;
+}
+
+.circle .pointer {
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -75px;
+}
+
+@keyframes backChange {
+    from {
+        background: url(../image/wheel-bg.png) no-repeat center;
+        background-size: cover;
+    }
+    50% {
+        background: url(../image/wheel-bg_1.png) no-repeat center;
+        background-size: cover;
+    }
+    to {
+        background: url(../image/wheel-bg.png) no-repeat center;
+        background-size: cover;
+    }
+}
